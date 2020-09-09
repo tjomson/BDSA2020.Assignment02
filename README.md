@@ -152,7 +152,7 @@ Event-based actions enable objects and signals to be transmitted to receiver obj
 
 To send signals, you can use __send signal actions__. Send signal actions are denoted with a "convex pentagon"---a rectangle with a tip that protrudes to the right.
 
-![EventBasedActions](/EventBasedActions.png)
+<img src="EventBasedActions.png" width="500">
 
 [1] Seidl, Martina, Marion Scholz, Christian Huemer, and Gerti Kappel. UML@ classroom: An introduction to object-oriented modeling. Springer, 2015.
 
