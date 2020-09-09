@@ -42,5 +42,14 @@ namespace BDSA2020.Assignment02.Tests
 
             Assert.Equal(expected, actual);
         }
+
+        [Theory]
+        [InlineData("https://sss.com", true)]
+        [InlineData("http://dr.dk", false)]
+        public void test_IsSecure(string uri, bool expected)
+        {
+            Uri testCase = new Uri(uri);
+            Assert.Equal(expected, testCase.IsSecure());
+        }
     }
 }

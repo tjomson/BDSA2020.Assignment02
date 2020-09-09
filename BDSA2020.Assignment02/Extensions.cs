@@ -35,10 +35,12 @@ namespace BDSA2020.Assignment02
             }
         }
 
-/*
+
         public static bool IsSecure(this Uri uri)
         {
-            
+            var requestType = uri.Scheme;
+            return requestType == "https";
+         /*   
             return uri.Scheme == Uri.UriSchemeHttps;
     
             if(uri.Scheme == "https") {
@@ -46,10 +48,10 @@ namespace BDSA2020.Assignment02
             } else {
                 return false;
             }
-       
+       */
          
         }
-   
+   /*
         public static string WordCount(this String str)
         {
             if(str == null || str.Length == 0)
@@ -60,6 +62,6 @@ namespace BDSA2020.Assignment02
             string[] words = str.Split("")
 
 
-        }
-   */ } 
+        }*/
+    } 
 }
