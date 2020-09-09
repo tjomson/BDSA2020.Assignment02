@@ -92,9 +92,7 @@ Use the supplied `Queries.cs` and corresponding tests class to implement and tes
 
 Each method *must* be implemented twice - once using only *extension methods* and once using as much *LINQ* as possible.
 
-## Submitting the assignment
 
-To submit the assignment you need to create a .pdf document using LaTeX containing the answers to the questions and a link to a public repository containing your fork of the completed code.
 
 
 
@@ -155,4 +153,18 @@ To send signals, you can use __send signal actions__. Send signal actions are de
 <img src="EventBasedActions.png" width="500">
 
 [1] Seidl, Martina, Marion Scholz, Christian Huemer, and Gerti Kappel. UML@ classroom: An introduction to object-oriented modeling. Springer, 2015.
+
+
+
+
+
+
+
+
+## Submitting the assignment
+
+To submit the assignment you need to create a .pdf document using LaTeX containing the answers to the questions and a link to a public repository containing your fork of the completed code.
+
+Members of the triplets should submit the same PDF file to pass the assignments (Note: This does not cover the name of the pdf, which can differ).  Make sure all group names and ID are clearly marked on the front page. 
+
 
