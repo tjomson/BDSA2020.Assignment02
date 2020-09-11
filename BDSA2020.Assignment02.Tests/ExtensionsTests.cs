@@ -51,5 +51,16 @@ namespace BDSA2020.Assignment02.Tests
             Uri testCase = new Uri(uri);
             Assert.Equal(expected, testCase.IsSecure());
         }
+
+        [Theory]
+        [InlineData("This is a test", 4)]
+        [InlineData("1 2 test is fun 3 5", 3)]
+        [InlineData("hej 2 ! % #", 1)]
+        public void test_WordCount(string input, int expected)
+        {
+            var actual = input.WordCount();
+
+            Assert.Equal(expected, actual);
+        }
     }
 }
