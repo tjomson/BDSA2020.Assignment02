@@ -40,15 +40,14 @@ namespace BDSA2020.Assignment02
             return res;
         }
 
-          public static IEnumerable<Wizard> WizardNameOrderQueire(IEnumerable<Wizard> wizards)
+          public static IEnumerable<string> WizardNameOrderQuery(IEnumerable<Wizard> wizards)
         {
-             IEnumerable<Wizard> res  =
+             IEnumerable<string> res  =
              from w in wizards
-             orderby w.Creator descending
-             select Wizard;
-            
+             orderby w.Creator descending, w.Name descending
+             select w.Name;
+        
             return res;
         }
-   
     }
 }

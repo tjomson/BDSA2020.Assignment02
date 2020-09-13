@@ -91,9 +91,13 @@ namespace BDSA2020.Assignment02
             }
         }
 
-        public static IEnumerable<string> WizardNamesOrderedExtension(this IEnumerable<Wizard> wizards)
+        public static IEnumerable<String> WizardNamesOrderedExtension(this IEnumerable<Wizard> wizards)
         {
-            
+            IEnumerable<Wizard> res  = wizards.OrderByDescending(wizards => wizards.Creator).ThenByDescending(wizards => wizards.Name);
+            foreach (var wizard in res)
+            {
+                yield return wizard.Name;
+            }
         }
     }
 }

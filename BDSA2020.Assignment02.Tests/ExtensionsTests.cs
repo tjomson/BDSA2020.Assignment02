@@ -103,5 +103,20 @@ namespace BDSA2020.Assignment02.Tests
             }
             Assert.Equal(2, counter);
         }
+
+        [Fact]
+        public void test_WizardNamesOrderedExtension()
+        {
+            var wizards = Wizard.Wizards.Value; 
+            var actual = wizards.WizardNamesOrderedExtension();
+            var expected = new string[]{"Shrek", "Sauron", "Lord Voldemort", "Harry Potter", "Lionel Messi", "Yoda", "Darth Vader", "Darth Plagueis", "Darth Maul", "boogieman"};
+            var counter = 0;
+            foreach (var name in actual)
+            {
+                Assert.Equal(expected[counter], name);
+                counter++;
+            }
+            Assert.Equal(10, counter);
+        }
     }
 }

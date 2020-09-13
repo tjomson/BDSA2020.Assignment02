@@ -35,6 +35,14 @@ namespace BDSA2020.Assignment02.Tests
             Assert.Equal(actual,expected);
         }
 
-    
+        [Fact]
+        public void Find_Reverse_Order_Of_Wizards_Name_And_Creator()
+        {
+            var wizards = Wizard.Wizards.Value; 
+            var actual = Queries.WizardNameOrderQuery(wizards);
+            var expected = new string[]{"Shrek", "Sauron", "Lord Voldemort", "Harry Potter", "Lionel Messi", "Yoda", "Darth Vader", "Darth Plagueis", "Darth Maul", "boogieman"};
+           
+            Assert.Equal(expected,actual);
+        }
     } 
 }
