@@ -62,5 +62,46 @@ namespace BDSA2020.Assignment02.Tests
 
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void test_RowlingNamesExtension()
+        {
+            var wizards = Wizard.Wizards.Value;
+            var actual = wizards.RowlingNamesExtension();
+            var expected = new string[]{"Harry Potter", "Lord Voldemort"};
+
+            var counter = 0;
+            foreach(var name in actual)
+            {
+                Assert.Equal(expected[counter], name);
+                counter++;
+            }
+            Assert.Equal(2, counter);
+        }
+
+        [Fact]
+        public void test_DarthExtension()
+        {
+            var wizards = Wizard.Wizards.Value;
+            var actual = wizards.DarthExtension();
+            var expected = 1977;
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void test_HarryPotterExtension()
+        {
+            var wizards = Wizard.Wizards.Value; 
+            var actual = wizards.HarryPotterExtension();
+            var expected = new (string name, int? year)[]{("Harry Potter", 1997), ("Lord Voldemort", 2002)};
+            
+            var counter = 0;
+            foreach (var wizard in actual)
+            {
+                Assert.Equal(expected[counter], wizard);
+                counter++;
+            }
+            Assert.Equal(2, counter);
+        }
     }
 }

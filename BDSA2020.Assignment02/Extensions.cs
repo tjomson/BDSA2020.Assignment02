@@ -23,6 +23,7 @@ namespace BDSA2020.Assignment02
         {
             return items.Where(i => i % 7 == 0 & i > 42);
         }
+        
 
         public static IEnumerable<int> LeapYears(this IEnumerable<int> items)
         {
@@ -51,10 +52,48 @@ namespace BDSA2020.Assignment02
         }
 
 
-        public static string[] RowlingNamesExtension(this string str)
+        public static IEnumerable<string> RowlingNamesExtension(this IEnumerable<Wizard> wizards)
         {
-            var sorted = str.Where(c => c.)
+            foreach(var wizard in wizards)
+            {
+                if (wizard.Creator == "J.K. Rowling")
+                {
+                    yield return wizard.Name;
+                }
             }
+        }
 
+        public static int? DarthExtension(this IEnumerable<Wizard> wizards)
+        {
+            int? firstSithLordYear = null;
+            foreach (var wizard in wizards)
+            {
+                var match = Regex.Match(wizard.Name, "^Darth.*");
+                if (match.Captures.Count != 0)
+                {
+                    if (wizard.Year < firstSithLordYear || firstSithLordYear == null)
+                    {
+                        firstSithLordYear = wizard.Year;
+                    }
+                }
+            }
+            return firstSithLordYear;
+        }
+
+        public static IEnumerable<(string name, int? year)> HarryPotterExtension(this IEnumerable<Wizard> wizards)
+        {  
+            foreach(var wizard in wizards)
+            {
+                if (wizard.Medium == "Harry Potter")
+                {
+                    yield return (wizard.Name, wizard.Year);
+                }
+            }
+        }
+
+        public static IEnumerable<string> WizardNamesOrderedExtension(this IEnumerable<Wizard> wizards)
+        {
+            
+        }
     }
 }
